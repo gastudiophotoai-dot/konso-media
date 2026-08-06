@@ -1,0 +1,6 @@
+{
+  "name": "Konso Media",
+  "description": "Konso Media Follower and Liker v1.0 - Premier Social Media Growth, Campaigns, Wallet, Payments & Security Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
