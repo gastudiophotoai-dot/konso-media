@@ -1,22 +1,20 @@
-package com.example
+package com.example.data.model
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
-import org.junit.Assert.*
-import org.junit.Test
-import org.junit.runner.RunWith
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-@RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
-  @Test
-  fun useAppContext() {
-    // Context of the app under test.
-    val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-    assertEquals("com.example", appContext.packageName)
-  }
-}
+@Entity(tableName = "users")
+data class UserEntity(
+    @PrimaryKey val id: String,
+    val name: String,
+    val email: String,
+    val phone: String,
+    val password: String = "password123",
+    val role: String = "USER", // "USER", "CLIENT", "ADMIN"
+    val balance: Double = 250.00,
+    val totalEarned: Double = 450.00,
+    val totalSpent: Double = 0.00,
+    val referralCode: String = "KONSO2025",
+    val referredCount: Int = 0,
+    val referralEarnings: Double = 0.0
+)
